@@ -33,10 +33,14 @@ public class CodeTest {
         $(".Layout-sidebar").$(byText("SoftAssertions")).click();
         $(".markdown-body").$(byText("Using JUnit5 extend test class:")).shouldHave(visible);
     }
-}
     @Test
-    void Drag&Drop(){
+    // Не получилось перенести элементы, с помощью Action().
+    void DragAndDrop() {
+       Selenide.open("https://the-internet.herokuapp.com/drag_and_drop");
+       $("#column-b").dragAndDropTo($("#column-a"));
+       $("#column-b").shouldHave(text("A")).shouldHave(visible);
+    }
+    }
 
 
 
-        }
