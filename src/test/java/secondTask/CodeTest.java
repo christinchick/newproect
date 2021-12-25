@@ -17,11 +17,6 @@ import static com.codeborne.selenide.Selenide.*;
 import static java.nio.channels.SocketChannel.open;
 
 public class CodeTest {
-    @BeforeAll
-    static void SizeAndOpera(){
-        Configuration.browser = OPERA;
-        Configuration.browserPosition = "30x30";
-    }
 
     @Test
     void homeWorkTwo (){
