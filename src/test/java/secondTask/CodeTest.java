@@ -19,16 +19,6 @@ import static java.nio.channels.SocketChannel.open;
 public class CodeTest {
 
     @Test
-    void homeWorkTwo (){
-
-        Selenide.open("https://github.com/selenide/selenide");
-        $("#wiki-tab").click();
-        $(".Layout-sidebar").$(byText("Show 2 more pages…")).click();
-        $(".Layout-sidebar").$(byText("SoftAssertions")).shouldHave(visible);
-        $(".Layout-sidebar").$(byText("SoftAssertions")).click();
-        $(".markdown-body").$(byText("Using JUnit5 extend test class:")).shouldHave(visible);
-    }
-    @Test
     // Не получилось перенести элементы, с помощью Action().
     void DragAndDrop() {
        Selenide.open("https://the-internet.herokuapp.com/drag_and_drop");
