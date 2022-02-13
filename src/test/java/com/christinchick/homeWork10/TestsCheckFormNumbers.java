@@ -21,6 +21,7 @@ import static com.codeborne.selenide.Browsers.OPERA;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
@@ -34,7 +35,7 @@ public class TestsCheckFormNumbers extends TestBase {
     void homeWorkTwo (){
 
         SelenideLogger.addListener("allure", new AllureSelenide());
-
+        open("https://skyward-crimea.ru");
         $(".elementor-button-wrapper").click();
         $(".elementor-widget-wrap").shouldHave(visible);
         $("#form-field-name").setValue("Кристина");
