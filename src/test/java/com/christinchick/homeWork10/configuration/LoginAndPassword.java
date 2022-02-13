@@ -7,13 +7,13 @@ import org.aeonbits.owner.Config;
 })
 public interface LoginAndPassword extends Config {
 
-    @Key("browser")
-    @DefaultValue("OPERA")
-    Browser getBrowser();
-
-    @Key("username")
-    String username();
-
-    @Key("password")
-    String password();
+//    @Key("browser")
+//    @DefaultValue("OPERA")
+//    Browser getBrowser();
+//
+//    @Key("username")
+//    String username();
+//
+//    @Key("password")
+//    String password();
 }
