@@ -35,7 +35,6 @@ public class TestsCheckFormNumbers extends TestBase {
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        Selenide.open("https://skyward-crimea.ru");
         $(".elementor-button-wrapper").click();
         $(".elementor-widget-wrap").shouldHave(visible);
         $("#form-field-name").setValue("Кристина");
