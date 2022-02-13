@@ -8,11 +8,8 @@ import org.aeonbits.owner.Config;
 public interface LoginAndPassword extends Config {
 
     @Key("browser")
-    @DefaultValue("CHROME")
+    @DefaultValue("OPERA")
     Browser getBrowser();
-
-    @Key("version")
-    String version();
 
     @Key("username")
     String username();

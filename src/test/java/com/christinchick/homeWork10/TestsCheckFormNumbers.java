@@ -13,6 +13,9 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+
+import java.util.function.Supplier;
 
 import static com.codeborne.selenide.Browsers.OPERA;
 import static com.codeborne.selenide.Condition.text;
@@ -21,14 +24,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
-public class TestsCheckFormNumbers extends TestBase{
-
-    @Test
-    public void testLocalFile() {
-        LoginAndPassword config = ConfigFactory.create(LoginAndPassword.class, System.getProperties());
-        assertThat(config.username()).isEqualTo("kristina");
-        assertThat(config.password()).isEqualTo("12345678");
-    }
+public class TestsCheckFormNumbers extends TestBase {
 
     @Test
     @Owner("Christinchick")

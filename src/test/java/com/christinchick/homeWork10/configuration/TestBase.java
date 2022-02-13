@@ -13,7 +13,13 @@ import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 public class TestBase {
 
     @BeforeAll
-    static void setUp(){
+    static void setUp() {
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion= System.getProperty("version", "91");
+        Configuration.browserSize= System.getProperty("browserSize", "300x300");
+        String login = System.getProperty("login");
+        String password = System.getProperty("password");
+
     DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
