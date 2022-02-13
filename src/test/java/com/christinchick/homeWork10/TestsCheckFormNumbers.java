@@ -40,8 +40,8 @@ public class TestsCheckFormNumbers extends TestBase {
         $(".elementor-widget-wrap").shouldHave(visible);
         $("#form-field-name").setValue("Кристина");
         $("#form-field-email").setValue("+79780382764");
-//        $("button[type='submit']").click();
-//        $(".elementor-message").shouldHave(text("Сообщение успешно отправлено!"));
+        $("button[type='submit']").click();
+        $(".elementor-message").shouldHave(text("Сообщение успешно отправлено!"));
     }
 }
 
