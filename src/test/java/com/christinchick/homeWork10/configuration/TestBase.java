@@ -11,6 +11,7 @@ import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 
 
 public class TestBase {
+
     @BeforeAll
     static void setUp(){
     DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -18,6 +19,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
     Configuration.browserCapabilities = capabilities;
 }
+
 
     @AfterEach
     void addAttachments() {
